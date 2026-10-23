@@ -1,0 +1,29 @@
+services:
+  # 🐍 BACKEND: FastAPI + PostgreSQL (neon)
+  - type: web
+    name: senatecnologo-backend
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
+    rootDir: backend
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.5
+      - key: DATABASE_URL
+        sync: false
+      - key: SECRET_KEY
+        sync: false
+
+  # ⚛️ FRONTEND: React + Vite
+  - type: web
+    name: senatecnologo-frontend
+    runtime: static
+    buildCommand: "npm install --legacy-peer-deps && npm run build"
+    staticPublishPath: dist
+    rootDir: frontend
+    envVars:
+      - key: VITE_API_URL
+        sync: false
+      - key: NPM_CONFIG_LEGACY_PEER_DEPS
+        value: true
