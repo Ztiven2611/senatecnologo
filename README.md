@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/acf3dc32-cd62-4533-97b0-ea4b99e63ae5/deploy-status)](https://app.netlify.com/projects/senatecnologo/deploys)
+
 # 🦷 Dental Blanc - Sistema Clínico Odontológico (Fullstack)
 
 Este proyecto es una solución integral y moderna para la gestión de una Clínica Odontológica, diseñada con un enfoque de alto rendimiento y estética de lujo.
