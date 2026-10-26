@@ -12,7 +12,7 @@ import { PaginaBlog } from './components/PaginaBlog';
 import { PaginaArticulo } from './components/PaginaArticulo';
 
 // Configuración dinámica de la API: usa la variable de entorno de Vite o localhost por defecto
-const API = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
+const API = `${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/api`;
 
 function App() {
   const [vistaActual, setVistaActual] = useState('inicio');
